@@ -1,0 +1,33 @@
+{
+  "name": "rog-harp-boilerplate",
+  "version": "0.0.1",
+  "description": "A boilerplate setup for sites built with the Harp static generator",
+  "author": {
+    "name": "Roger Hutchings",
+    "email": "roger@hutchin.gs",
+    "url": "https://github.com/rogerhutchings/",
+  },
+  "keywords": [
+    "boilerplate",
+    "bootstrap",
+    "harp",
+    "stylus"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap-styl": "^4.0.5",
+    "harp": "^0.17.0",
+    "nib": "^1.1.0"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/harp server"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/rogerhutchings/hb-rog.git"
+  },
+  "homepage": "https://github.com/rogerhutchings/hb-rog",
+  "bugs": {
+    "url": "https://github.com/rogerhutchings/hb-rog/issues"
+  }
+}
