@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## Unreleased
+## [0.1.0] - 2015-10-02
 ### Added
 - Added Gulp dev (inc BrowserSync), compile, and sample S3 deploy tasks, including asset revisioning
 

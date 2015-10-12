@@ -1,6 +1,6 @@
 {
   "name": "hb-rog",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A boilerplate setup for sites built with the Harp static generator",
   "author": {
     "name": "Roger Hutchings",
