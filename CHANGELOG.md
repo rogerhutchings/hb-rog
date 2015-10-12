@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ## Unreleased
 ### Added
-- Added Gulp dev tasks
+- Added Gulp dev (inc BrowserSync), compile, and sample S3 deploy tasks, including asset revisioning
 
 ### Changed
 - Renamed package for consistency with repo name, Harp format
@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ### Fixed
 - Removed trailing comma from `package.json`
+- Corrected a few typos and stylistic points
 
 ## [0.0.1] - 2015-10-02
 ### Added

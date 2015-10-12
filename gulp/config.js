@@ -2,18 +2,48 @@
 
 var config = module.exports = {};
 
-var root = process.cwd();
-var publicDir = root + '/public';
-var buildDir = root + '/build';
+// Directories
+var rootDir = process.cwd();
+var publicDir = rootDir + '/public';
+var buildDir = rootDir + '/build';
 
+// Files
+var manifestFile = buildDir + '/rev-manifest.json';
+
+// Other settings
 var port = 9000;
+
+// Config blocks for tasks
+config.clean = {
+    src: buildDir + '/**'
+};
+
+config.compile = {
+    src: rootDir,
+    dest: buildDir
+};
+
+config.deploy = {
+    src: buildDir,
+    client: {
+        s3Options: {
+            accessKeyId: process.env.ROG_AMAZON_ACCESS_KEY_ID,
+            secretAccessKey: process.env.ROG_AMAZON_SECRET_ACCESS_KEY,
+            region: 'eu-west-1'
+        }
+    },
+    s3: {
+        Bucket: '',
+        Prefix: ''
+    }
+};
 
 config.dev = {
     browserSync: {
         proxy: 'localhost:' + port
     },
     harp: {
-        dir: publicDir,
+        src: publicDir,
         options: {
             port: port
         }
@@ -23,26 +53,23 @@ config.dev = {
             publicDir + '/**/*.jade',
             publicDir + '/**/*.json'
         ],
-        styles: root + '/styles/**/*.styl'
+        styles: rootDir + '/styles/**/*.styl'
     }
-}
+};
 
+config.rev = {
+    src: [
+        buildDir + '/main.css'
+    ],
+    dest: buildDir
+};
 
-// config.
+config.revReplace = {
+    manifest: manifestFile,
+    src: buildDir + '/index.html'
+};
 
-//     del: {
-//         src: 'build'
-//     },
-
-//     rev: {
-//         src: 'build/*.css',
-//         dest: 'build'
-//     },
-
-//     revReplace: {
-//         src: 'build/**/*.html'
-//     },
-
-//     tidy: {
-//         manifest: 'build/rev-manifest.json'
-//     }
+config.tidy = {
+    manifest: manifestFile,
+    dest: buildDir
+};

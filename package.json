@@ -18,12 +18,20 @@
     "bootstrap-styl": "^4.0.5",
     "browser-sync": "^2.9.11",
     "bulk-require": "^0.2.1",
+    "del": "^2.0.2",
     "gulp": "^3.9.0",
+    "gulp-compile-handlebars": "^0.5.0",
+    "gulp-rev": "^6.0.1",
+    "gulp-util": "^3.0.6",
     "harp": "^0.17.0",
-    "nib": "^1.1.0"
+    "nib": "^1.1.0",
+    "run-sequence": "^1.1.4",
+    "s3": "^4.4.0"
   },
   "scripts": {
-    "start": "./node_modules/.bin/gulp dev"
+    "start": "./node_modules/.bin/gulp dev",
+    "build": "./node_modules/.bin/gulp build",
+    "deploy": "./node_modules/.bin/gulp deploy"
   },
   "repository": {
     "type": "git",

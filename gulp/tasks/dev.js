@@ -6,10 +6,10 @@ var gulp = require('gulp');
 var harp = require('harp');
 var reload = browserSync.reload;
 
-// Start the development server
+// Start the development server and watch tasks
 gulp.task('dev', function () {
 
-    return harp.server(config.harp.dir, config.harp.options, function () {
+    return harp.server(config.harp.src, config.harp.options, function () {
 
         browserSync(config.browserSync);
 

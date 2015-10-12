@@ -3,8 +3,11 @@ html(lang="en")
 
     head
         title= title
-        meta(name="description" content="#{ description }")
-        link(rel="stylesheet" href="/main.css")
+        meta(name="description" content="#{description}")
+        if environment === 'production'
+            link(rel="stylesheet" href="{{ asset 'main.css' }}")
+        else
+            link(rel="stylesheet" href="/main.css")
 
     body
         != yield
