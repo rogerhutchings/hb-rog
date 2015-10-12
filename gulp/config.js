@@ -26,3 +26,23 @@ config.dev = {
         styles: root + '/styles/**/*.styl'
     }
 }
+
+
+// config.
+
+//     del: {
+//         src: 'build'
+//     },
+
+//     rev: {
+//         src: 'build/*.css',
+//         dest: 'build'
+//     },
+
+//     revReplace: {
+//         src: 'build/**/*.html'
+//     },
+
+//     tidy: {
+//         manifest: 'build/rev-manifest.json'
+//     }
