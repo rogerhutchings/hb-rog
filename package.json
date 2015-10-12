@@ -16,15 +16,18 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap-styl": "^4.0.5",
+    "browser-sync": "^2.9.11",
+    "bulk-require": "^0.2.1",
+    "gulp": "^3.9.0",
     "harp": "^0.17.0",
     "nib": "^1.1.0"
   },
   "scripts": {
-    "start": "./node_modules/.bin/harp server"
+    "start": "./node_modules/.bin/gulp dev"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/rogerhutchings/hb-rog.git"
+    "type": "git",
+    "url": "https://github.com/rogerhutchings/hb-rog.git"
   },
   "homepage": "https://github.com/rogerhutchings/hb-rog",
   "bugs": {
